@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My store</title>
+    <link rel="website icon" href="img/basket-color-icon.png" >
+
+    <style>
+        *{
+    margin : 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    /* display: flex;
+    align-items: left; */
+    background-color: #ffffff;
+    /* padding :-1rem; */
+}
+
+.container{
+    background-color: var(--background-color);
+    margin:0 auto;
+    padding: 0rem 2rem;
+    display : flex;
+    flex-direction: column;
+    max-width: 1280px;
+    justify-content: space-between;    
+    /* border: 1px solid black; */
+    /* width: 100%; */
+}
+header{
+    max-width: 1280px;
+    margin-top: 0.5rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding : 0.5rem 2.4rem;
+    border-radius: 3.5rem;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px #777 ;
+       
+    /* border: 1px solid black; */
+}
+.left{
+    width: 20%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    gap: 1rem;
+}
+
+.left img{
+    width:9.5rem;
+    height:4rem;
+    
+}
+header .middle {
+    width:70%;
+    /* padding-top: 1.5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(4,1fr); */
+    z-index :2;
+}
+.middle ul{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:0.5rem;
+    justify-content: space-between;
+}
+.middle ul li{
+    list-style-type: none;
+    cursor: pointer;
+    transition: all  ;
+    display: flex;
+    justify-content:center;
+}
+
+.middle ul li a{
+    text-decoration: none;
+    color: #777;
+    transition: all 0s ;
+    font-size: 1.12rem;
+    font-weight: 500;
+}
+.middle ul li a:hover{
+    color: #2563eb;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* padding: 1.6rem 1.2rem; */
+
+}
+.right button{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #2563eb;
+    padding: 0.4rem 1.2rem;
+    width: 10rem;
+    border-radius: 6px;
+    cursor : pointer;
+    border:0;
+    outline:0;
+    transform: all 0.2sec;
+
+}
+.right button:hover{
+    background-color: #5254f8;
+
+}
+@media screen and (max-width :759px) {
+    .container{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+}
+.mystore{
+    
+    
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="left">
+                
+                    <img src="img/logo.png" alt="logo">
+                
+            </div>
+            <div class="middle">
+                <ul>
+                        <li><a href="index.html"  target="_self" class="link-grid">HOME</a></li>
+                        <li><a href="" class="link-grid">ABOUT </a></li>
+                        <li><a href="" class="link-grid">SERVICES</a></li>
+                        <li><a href="" class="link-grid">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <button>CONTACT</button>
+            </div>
+
+        </header>
+    </div>
+    <div class="mystore">
+      <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <script>
+      
+    </script>
+</body>
+</html>
