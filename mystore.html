@@ -46,7 +46,7 @@ header{
        
     /* border: 1px solid black; */
 }
-.left{
+header .left{
     width: 20%;
     display: flex;
     /* flex-direction: column; */
@@ -54,7 +54,7 @@ header{
     gap: 1rem;
 }
 
-.left img{
+header .left img{
     width:9.5rem;
     height:4rem;
     
@@ -68,14 +68,14 @@ header .middle {
     /* grid-template-columns: repeat(4,1fr); */
     z-index :2;
 }
-.middle ul{
+header .middle ul{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap:0.5rem;
     justify-content: space-between;
 }
-.middle ul li{
+header .middle ul li{
     list-style-type: none;
     cursor: pointer;
     transition: all  ;
@@ -83,55 +83,243 @@ header .middle {
     justify-content:center;
 }
 
-.middle ul li a{
+header .middle ul li a{
     text-decoration: none;
     color: #777;
-    transition: all 0s ;
+    transition: all 0s ease-in-out ;
     font-size: 1.12rem;
     font-weight: 500;
 }
-.middle ul li a:hover{
+header .middle ul li a:hover{
     color: #2563eb;
     font-size: 1.2rem;
     font-weight: 600;
 }
-.right{
+#right{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    color: #f8a83f;
+    cursor :pointer;
+    font-size: 1.12rem;
+    font-weight: 550;
     /* padding: 1.6rem 1.2rem; */
 
 }
-.right button{
-    font-size: 1rem;
-    font-weight: 500;
-    color: #fff;
-    background-color: #2563eb;
-    padding: 0.4rem 1.2rem;
-    width: 10rem;
-    border-radius: 6px;
-    cursor : pointer;
-    border:0;
-    outline:0;
-    transform: all 0.2sec;
+#right:hover{
+    text-shadow: 1px 1px 10px #f6bb6e;
+}
 
-}
-.right button:hover{
-    background-color: #5254f8;
 
-}
-@media screen and (max-width :759px) {
-    .container{
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    
-}
 .mystore{
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    background-color: transparent;
+    margin:0 auto;
+}
+.items{
+    max-width: 1280px;
+    padding : 0.5rem 2.4rem;
+    border-radius: 3.5rem;
+    box-shadow: 5px 5px 10px #777;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    flex-direction: column;
     
+    /* grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr)); */
+
+
+}
+.items-link{
+    display: flex;
+    justify-content: center;
+    flex-direction: row ;
+    max-width: 100%;
+    grid-gap:10rem;
+}
+.items-link-img{
+    height:50%;
+    width:20%;
+    display: flex;
+    justify-content: center;
+}
+.items-link img{
+    height: 100%;
+    width:17rem;
+    object-fit: cover;
+    object-position:center ;
+    filter: drop-shadow(5px 4px 5px #3c91e6);
     
 }
+.items-link-text{
+    display:flex;
+    flex-direction: column;
+    max-width: 1200px;
+    /* object-fit: cover;    */
+    padding: 1rem 3rem;
+}
+.items-link-text h2:hover{
+    cursor: pointer;
+    color: #3c91e6;
+
+}
+.news-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#5254f8;
+    
+}
+
+.news-disc{
+    text-align: left;
+    color: #777;
+}
+.items-link-text form {
+    display: flex;
+    flex-direction: row;
+}
+.items-link-text input {
+    margin-top:1rem;
+    border-radius :5px;
+    outline: 0;
+    border:1px solid #2563eb;
+    text-align: center;
+    height:1.25rem;
+    margin-right: 1rem;
+}
+.items-link-text input:focus {
+    box-shadow: 1px 1px 5px #1444a9;
+
+}
+.items-link-text button{
+    margin-top:0.5rem;
+    padding:0.5rem 1rem;
+    background-color: #2563eb;
+    color: #ffffff;
+    outline: 0;
+    border: 0;
+    border-radius :5px;
+    cursor: pointer;
+
+}
+.items-link-text button:hover{
+    background-color:#5254f8;
+
+}
+
+
+
+
+.footer-container{
+    background-color: #ffffff;
+    margin:1rem auto;
+    /* padding: 0 2rem; */
+    display : flex;
+    flex-direction: column;
+    width: 97%;
+    grid-area: footer;
+
+    /* border: 1px solid black; */
+    /* width: 100%; */
+}
+.footer{
+    max-width: 90%;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding : 1rem 2.4rem;
+    border-radius: 3.5rem;
+    /* border: 1px solid black; */
+}
+.left{
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-logo a {
+    display:flex;
+    /* justify-content : center; */
+    align-items: center;
+    margin-bottom: 1.9rem;
+    margin-top: 1.9rem;
+
+}
+.footer-logo img{
+    width:6.9rem;
+    height:2.8rem;
+    
+}
+
+.left p{
+    font-size: 1 rem;
+    color:#777; 
+
+}
+
+.social img{
+    height :1.5rem;
+    width:1.5rem;
+    cursor : pointer ;
+    margin-right: 1rem;
+    color: #777;
+
+}
+
+
+.right{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+    /* width: 70%; */
+    grid-gap: 6rem;
+    padding: 2rem 0.4rem;
+}
+/* .footer-grid-column {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.heading{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+}
+.footer-grid-column ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.footer-grid-column ul li{
+    list-style: none;
+    cursor : pointer;
+}
+.footer-grid-column ul li a{
+    color:#777;
+    text-decoration: none;
+    font-size: 0.9rem ;
+
+    
+}
+
+.footer-copyright{
+    color:#9d9d9d;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:1px solid #e5e7eb;
+    /* margin-top: 1rem; */
+    padding : 1rem;
+}
+
     </style>
 
 </head>
@@ -146,23 +334,216 @@ header .middle {
             <div class="middle">
                 <ul>
                         <li><a href="index.html"  target="_self" class="link-grid">HOME</a></li>
-                        <li><a href="" class="link-grid">ABOUT </a></li>
-                        <li><a href="" class="link-grid">SERVICES</a></li>
-                        <li><a href="" class="link-grid">CONTACT</a></li>
+                        <li><a href="#foot-container" class="link-grid">ABOUT </a></li>
+                        <li><a href="#foot-container" class="link-grid">SERVICES</a></li>
+                        <li><a href="#foot-container" class="link-grid">CONTACT</a></li>
                 </ul>
             </div>
-            <div class="right">
-                <button>CONTACT</button>
+            <div id="right">
+                <!-- <button>CONTACT</button> -->
             </div>
 
         </header>
     </div>
     <div class="mystore">
-      <br><br><br><br><br><br><br><br><br><br>
+      <div class="items">
+
+        <div class="items-link">
+            <div class="items-link-img"><img src="img/cisco-webex-room-kit-video-conferencing-system.png" alt=""></div>
+            <div class="items-link-text">
+                <h2 class ="news-title">
+                Cisco Kit 
+                </h2>
+                <P class="news-disc">The new Cisco kit with built-in AI</P>
+                <form action="">
+                    <input type="number" placeholder="- select quantity -" id="cart-ip1">
+                    <button>Add to cart</button>
+                </form>
+            </div>
+            
+
+        </div>
+
+        <div class="items-link">
+            <div class="items-link-img"><img src="img/png-transparent-laptop-hp-pavilion-intel-core-i5-pavilion-electronics-netbook-computer-removebg-preview.png" alt=""></div>
+            <div class="items-link-text">
+                <h2 class ="news-title">
+                HP pavilion 
+                </h2>
+                <P class="news-disc">with new intel-core-i5 12th Gen</P>
+                <form action="">
+                    <input type="number" placeholder="- select quantity -" id="cart-ip2">
+                    <button>Add to cart</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="items-link">
+            <div class="items-link-img"><img src="img/png-transparent-wireless-access-points-network-switch-ethernet-hub-cisco-catalyst-port-others-computer-network-electronics-network-switch-removebg-preview.png" alt=""></div>
+            <div class="items-link-text">
+                <h2 class ="news-title">
+                Ethernet Hub 
+                </h2>
+                <P class="news-disc">the new Cisco Ethernet hub</P>
+                <form action="">
+                    <input type="number" placeholder="- select quantity -" id="cart-ip3">
+                    <button>Add to cart</button>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="items-link">
+            
+            <div class="items-link-img"><img src="img/png-clipart-desktop-computers-dell-inspiron-intel-core-i7-desktop-pc-electronics-gadget-removebg-preview.png" alt=""></div>
+            <div class="items-link-text">
+                <h2 class ="news-title">
+                Dell inspiron 
+                </h2>
+                <P class="news-disc">with new intel-core-i7 12th Gen</P>
+                <form action="">
+                    <input type="number" placeholder="- select quantity -" id="cart-ip4">
+                    <button>Add to cart</button>
+                </form>
+            </div>
+        </div>
+
+      </div>
 
     </div>
+
+    <div class="footer-container" id ="foot-container">
+        <!-- -------this contains the footer---------->
+
+        <footer class="footer">
+            <!-- this the left section of the footer -->
+            <div class="left">
+
+                <div class="footer-logo">
+                    <a class="logo-link">
+                        <img src="img/logo.png" alt="">
+                    </a>
+
+                </div>
+                <p>Learning is the new skill </p>
+
+                <!-- social logo -->
+                 <div class="social">
+                    <a class ="social-links" href="https://www.instagram.com/dpi.drdo/">
+                        <img src="img/instagram-svgrepo-com.png" alt="insta">
+                    </a>
+                    <a class ="social-links" href="https://x.com/DRDO_India" target="_blank">
+                        <img src="img/x-social-media-black-icon.png" alt="linkdin">
+                    </a>
+                    <a class ="social-links" href="https://www.facebook.com/DPIDRDO/">
+                        <img src="img/meta-black-icon.png" alt="microsoft">
+                    </a>
+                    
+                 </div>
+
+            </div>
+
+            <!-- this is the right section of the footer -->
+
+            <div class="right">
+
+                <!-- column 1 -->
+                    <div class="footer-grid-column">
+                        <div class="heading">PRODUCTS</div>
+                        <div class="links">
+                            <ul>
+                                <li><a href="/project1/">Overview</a></li>
+                                <li><a href="https://drdo.gov.in/drdo/" target="_blank">Solutions</a></li>
+                                <li><a href="/project3/">Pricing</a></li>
+                                <li><a href="/project4/">Customers</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                
+                <!-- column 2 -->
+                <div class="footer-grid-column">
+                    <div class="heading">SERVICES</div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">Contact</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">Documentation</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">Chat</a></li>
+                            <!-- <li><a href="/project4/">pro4</a></li> -->
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <!-- column 3 -->
+                <div class="footer-grid-column">
+                    <div class="heading">COMPANY</div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">About</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/student-corner" target="_blank">Jobs</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/knowledge-center" target="_blank">Prices</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/knowledge-center" target="_blank">Docs</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <!-- column 4 -->
+                <div class="footer-grid-column">
+                    <div class="heading">Legal</div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">Terms & Services</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">Privacy Policies</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">Cookie settings</a></li>
+                            <li><a href="https://drdo.gov.in/drdo/" target="_blank">Contact</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                
+
+            </div>
+
+        </footer>
+
+        <!-- this is the another div for the copyrightsection -->
+
+        <div class="footer-copyright">
+            © 2024 Footer Media Limited All rights reserved.
+        </div>
+        
+    </div>
+
+
     <script>
-      
+      document.addEventListener('DOMContentLoaded', (event) => {
+    var buttons = document.querySelectorAll('.items-link button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            
+            var ip1 = parseInt(document.getElementById('cart-ip1').value) || 0;
+            var ip2 = parseInt(document.getElementById('cart-ip2').value) || 0;
+            var ip3 = parseInt(document.getElementById('cart-ip3').value) || 0;
+            var ip4 = parseInt(document.getElementById('cart-ip4').value) || 0;
+            
+            var total = ip1 + ip2 + ip3 + ip4;
+            document.getElementById('right').innerHTML = ('Total quantity in cart: ' + total);
+        });
+    });
+});
+
+// document.getElementsByClassName("contact").addEventListener("click", function() {
+//     document.querySelector(".footer-container").scrollIntoView({ behavior: 'smooth' });
+// });
     </script>
+    
 </body>
 </html>
