@@ -13,17 +13,23 @@
     font-family: 'poppins',sans-serif;
     box-sizing: border-box;
 }
-body{
-    width:100vw;
-    height: 100vh;
-    /* display: flex;
-    align-items: left; */
-    background-color: #ffffff;
-    /* padding :-1rem; */
-}
+
+body, html {
+            height: 100vh;
+            margin: 0;
+            font-family: "poppins", sans-serif;
+            
+            /* background-color: #ffffff; */
+            background: url('img/0f11b6207fc180fe41a2ac83ca8a4f5b.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
 
 .container{
-    background-color: var(--background-color);
+    border-radius:3rem;
+    /* background-color: var(--background-color); */
+    background: rgba(237, 236, 236, 0.433);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px #777;
     margin:0 auto;
     padding: 0rem 2rem;
     display : flex;
@@ -39,10 +45,7 @@ header{
     text-align: left;
     display: flex;
     justify-content: space-between;
-    padding : 0.5rem 2.4rem;
-    border-radius: 3.5rem;
-    background-color: #fff;
-    box-shadow: 5px 5px 10px #777 ;
+    
        
     /* border: 1px solid black; */
 }
@@ -85,13 +88,13 @@ header .middle ul li{
 
 header .middle ul li a{
     text-decoration: none;
-    color: #777;
+    color: #000000;
     transition: all 0s ease-in-out ;
     font-size: 1.12rem;
     font-weight: 500;
 }
 header .middle ul li a:hover{
-    color: #2563eb;
+    color: #ffffff;
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -99,7 +102,7 @@ header .middle ul li a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f8a83f;
+    color: #ff9100;
     cursor :pointer;
     font-size: 1.12rem;
     font-weight: 550;
@@ -129,7 +132,8 @@ header .middle ul li a:hover{
     align-items: self-start;
     justify-content: center;
     flex-direction: column;
-    
+    background: rgba(237, 236, 236, 0.433);
+    backdrop-filter: blur(10px);
     /* grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr)); */
 
 
@@ -152,7 +156,7 @@ header .middle ul li a:hover{
     width:17rem;
     object-fit: cover;
     object-position:center ;
-    filter: drop-shadow(5px 4px 5px #3c91e6);
+    filter: drop-shadow(5px 4px 5px #777);
     
 }
 .items-link-text{
@@ -164,19 +168,20 @@ header .middle ul li a:hover{
 }
 .items-link-text h2:hover{
     cursor: pointer;
-    color: #3c91e6;
+    color: #011325;
 
 }
 .news-title{
+    
     font-size: 2.5rem;
     font-weight: bold;
-    color:#5254f8;
+    color:#000112;
     
 }
 
 .news-disc{
     text-align: left;
-    color: #777;
+    color: #000000;
 }
 .items-link-text form {
     display: flex;
@@ -184,21 +189,22 @@ header .middle ul li a:hover{
 }
 .items-link-text input {
     margin-top:1rem;
+    padding:0 0.5rem;
     border-radius :5px;
     outline: 0;
-    border:1px solid #2563eb;
+    border:1px solid #000000;
     text-align: center;
     height:1.25rem;
     margin-right: 1rem;
 }
 .items-link-text input:focus {
-    box-shadow: 1px 1px 5px #1444a9;
+    box-shadow: 1px 1px 5px #ffffff;
 
 }
 .items-link-text button{
     margin-top:0.5rem;
     padding:0.5rem 1rem;
-    background-color: #2563eb;
+    background-color: #000000;
     color: #ffffff;
     outline: 0;
     border: 0;
